@@ -77,6 +77,7 @@ public class MySwitch extends CompoundButton {
     private CharSequence mTextOn;
     private CharSequence mTextOff;
     private boolean fixed=false;
+    private boolean clickDisabled=false;
     private boolean onOrOff=true;
 
     private int mTouchMode;
@@ -580,20 +581,34 @@ public class MySwitch extends CompoundButton {
 	*/
 	
 	@Override
-    public boolean performClick() {
-        //Log.d(TAG, "performClick(). current Value="+isChecked());
-		if (!fixed) {
-           boolean  flag = super.performClick();
-           //Log.d(TAG, "after super.performClick().  Value="+isChecked());
-           return flag;
-		}
-		else {
-			if (this.mOnChangeAttemptListener != null)
-				this.mOnChangeAttemptListener.onChangeAttempted(isChecked());
+	public boolean performClick() {
+		if (!clickDisabled) {
+			// Log.d(TAG, "performClick(). current Value="+isChecked());
+			if (!fixed) {
+				boolean flag = super.performClick();
+				// Log.d(TAG,
+				// "after super.performClick().  Value="+isChecked());
+				return flag;
+			} else {
+				if (this.mOnChangeAttemptListener != null)
+					this.mOnChangeAttemptListener
+							.onChangeAttempted(isChecked());
+				return false;
+			}
+		} else {
 			return false;
 		}
+	}
+
+    public void disableClick() {
+    	clickDisabled=true;
     }
 
+
+    
+    public void enableClick() {
+    	clickDisabled=false;
+    }
 
     /*
         public  void toggleWithAnimation(boolean animate) {

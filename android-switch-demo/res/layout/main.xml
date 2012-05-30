@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
+    xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FF555555"
@@ -10,44 +10,121 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Switch with Text inside/on thumb" />
-   <com.appscumen.example.MySwitch
-                    style="@style/mySwitchStyle"
-                    android:id="@+id/switch1"
-                    android:layout_gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginRight="4dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    mySwitch:textOn="ToBe"
-                    mySwitch:textOff="NotToBe" 
-                    />
-   
-    <TextView
+
+    <com.appscumen.example.MySwitch
+        android:id="@+id/switch1"
+        style="@style/mySwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        mySwitch:textOff="NotToBe"
+        mySwitch:textOn="ToBe" />
+
+    <View
         android:layout_width="fill_parent"
-        android:layout_height="5dp"
-        />
+        android:layout_height="15dp" />
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text=" regular Switch" />
-   <com.appscumen.example.MySwitch
-                    style="@style/mySwitchStyle"
-                    mySwitch:track="@drawable/switch_track"
-                    mySwitch:thumb="@drawable/switch_thumb"
-                    mySwitch:textOnThumb="false"
-                    android:id="@+id/switch2"
-                    android:layout_gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginRight="4dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    mySwitch:textOn="ON"
-                    mySwitch:textOff="OFF" 
-                    />
+
+    <com.appscumen.example.MySwitch
+        android:id="@+id/switch2"
+        style="@style/mySwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        mySwitch:textOff="OFF"
+        mySwitch:textOn="ON"
+        mySwitch:textOnThumb="false"
+        mySwitch:thumb="@drawable/switch_thumb"
+        mySwitch:track="@drawable/switch_track" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Slide to unLock" />
+
+    <com.appscumen.example.MySwitch
+        android:id="@+id/switch3"
+        style="@style/mySwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        mySwitch:textOff=" "
+        mySwitch:textOn=" Slide to unlock "
+        mySwitch:textOnThumb="false"
+        mySwitch:thumb="@drawable/switch_thumb"
+        mySwitch:track="@drawable/switch_track" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Publish on every social site ?" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.appscumen.example.MySwitch
+            android:id="@+id/switch4"
+            style="@style/mySwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            mySwitch:textOff=" "
+            mySwitch:textOn=" "
+            mySwitch:textOnThumb="false"
+            mySwitch:thumb="@drawable/switch_thumb"
+            mySwitch:track="@drawable/switch_track" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/switch4"
+            android:id="@+id/Yes"
+            android:text="Yes  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/switch4"
+            android:id="@+id/No"
+            android:text=" No" />
+    </RelativeLayout>
+
 </LinearLayout>
