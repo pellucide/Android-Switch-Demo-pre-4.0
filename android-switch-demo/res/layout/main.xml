@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FF555555"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch with Text inside/on thumb" />
+   <com.appscumen.example.MySwitch
+                    style="@style/mySwitchStyle"
+                    android:id="@+id/switch1"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    mySwitch:textOn="ToBe"
+                    mySwitch:textOff="NotToBe" 
+                    />
+   
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=" regular Switch" />
+   <com.appscumen.example.MySwitch
+                    style="@style/mySwitchStyle"
+                    mySwitch:track="@drawable/switch_track"
+                    mySwitch:thumb="@drawable/switch_thumb"
+                    mySwitch:textOnThumb="false"
+                    android:id="@+id/switch2"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    mySwitch:textOn="ON"
+                    mySwitch:textOff="OFF" 
+                    />
+</LinearLayout>

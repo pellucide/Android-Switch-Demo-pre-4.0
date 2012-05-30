@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    
+<!--  bottom shadow -->
+<item android:bottom="0px" android:right="0px" android:top="0px" android:left="0px">
+     <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+          <gradient
+                android:startColor="#1000"
+                android:centerColor="#1000"
+                android:centerX="0.96"
+                android:endColor="#7000"
+                android:angle="270"
+                android:dither="true" />    
+          <corners android:radius="6dp" />
+    </shape>
+</item>
+
+
+<!--  Right shadow -->
+<item android:bottom="0px" android:right="0px" android:top="0px" android:left="0px">
+     <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+          <gradient
+                android:startColor="#1000"
+                android:centerColor="#1000"
+                android:centerY="0.99"
+                android:endColor="#8000"
+                android:angle="0"
+                android:dither="true" />    
+          <corners android:radius="6dp" />
+    </shape>
+</item>
+ 
+<!-- Top Lighted Area -->
+<item android:bottom="1dp" android:right="1dp" android:top="0px" android:left="0px">
+     <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+          <gradient
+                android:startColor="#1000"
+                android:centerColor="#1000"
+                android:centerX="0.97"
+                android:endColor="#5aaa"
+                android:angle="90"
+                android:dither="true" />    
+          <corners android:radius="6dp" />
+
+    </shape>
+</item>
+<!-- Left Lighted Area -->
+<item android:bottom="1dp" android:right="1dp" android:top="0px" android:left="0px">
+     <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+          <gradient
+                android:startColor="#1000"
+                android:centerColor="#1000"
+                android:centerY="0.99"
+                android:endColor="#5bbb"
+                android:angle="180"
+                android:dither="true" />    
+          <corners android:radius="6dp" />
+
+    </shape>
+</item>
+
+</layer-list>
+
+
