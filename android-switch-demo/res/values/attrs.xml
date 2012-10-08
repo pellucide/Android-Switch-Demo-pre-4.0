@@ -10,10 +10,12 @@
         <attr name="textOn" format="reference|string" />
         <!-- Text to use when the switch is in the unchecked/"off" state. -->
         <attr name="textOff" format="reference|string" />
-        <!-- if text should be drawn outside the track. -->
-        <attr name="textOutsideTrack" format="boolean" />
+        <!-- if the switch should operate like iOS UISwitch -->
+        <attr name="pushStyle" format="boolean" />
         <!-- if text should be drawn on the Thumb or On the track. -->
         <attr name="textOnThumb" format="boolean" />
+        <!-- if the thumb should be allowed to move more beyond the switch boundaries -->
+        <attr name="thumbExtraMovement" format="dimension" />
         <!-- Amount of padding on either side of text within the switch thumb. -->
         <attr name="thumbTextPadding" format="dimension" />
         <!-- Amount of padding on either side of text within the switch track. -->
@@ -26,6 +28,17 @@
         <attr name="switchMinHeight" format="dimension" />
         <!-- Minimum space between the switch and caption text -->
         <attr name="switchPadding" format="dimension" />
+        
+        <!-- the track drawable will be drawn on top of these background. So if
+             these back grounds were to be visible, the track has to have transparency -->
+        <!-- The background when left side of the switch is visible -->
+        <attr name="leftBackground" format="reference"/>
+        
+        <!-- The background when right side of the switch is visible -->
+        <attr name="rightBackground" format="reference"/>
+        
+        <!-- We need a mask drawable to mask the background, then draw the track -->
+        <attr name="backgroundMask" format="reference"/>
     </declare-styleable>
     
     <declare-styleable name="mySwitchTextAppearanceAttrib">

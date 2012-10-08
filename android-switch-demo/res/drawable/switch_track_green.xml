@@ -10,7 +10,7 @@
                 android:endColor="#54ffffff"
                 android:angle="270"
                 android:dither="true" />    
-          <corners android:radius="14dp" />
+          <corners android:radius="9dp" />
           <padding android:padding="5dp"/>
     </shape>
 </item>
@@ -24,7 +24,7 @@
                 android:endColor="#33ffffff"
                 android:angle="0"
                 android:dither="true" />    
-          <corners android:radius="14dp" />
+          <corners android:radius="9dp" />
           <padding android:padding="5dp"/>
     </shape>
 </item>
@@ -38,7 +38,7 @@
                 android:endColor="#55000000"
                 android:angle="90"
                 android:dither="true" />    
-          <corners android:radius="14dp" />
+          <corners android:radius="9dp" />
           <padding android:padding="5dp"/>
 
     </shape>
@@ -53,7 +53,7 @@
                 android:endColor="#88000000"
                 android:angle="180"
                 android:dither="true" />    
-          <corners android:radius="14dp" />
+          <corners android:radius="9dp" />
     </shape>
 </item>
 </layer-list>

@@ -21,8 +21,9 @@
         <item name="switchTextAppearanceAttrib">@style/mySwitchTextAppearance</item>
         <item name="textOn">ON</item>
         <item name="textOff">OFF</item>
-        <item name="textOutsideTrack">false</item>
+        <item name="pushStyle">false</item>
         <item name="textOnThumb">true</item>
+        <item name="thumbExtraMovement">0dp</item>
         <item name="thumbTextPadding">6dp</item>
         <item name="trackTextPadding">6dp</item>
         <item name="switchMinWidth">96dp</item>

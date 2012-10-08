@@ -9,11 +9,37 @@ package com.appscumen.example;
 
 public final class R {
     public static final class attr {
+        /**  We need a mask drawable to mask the background, then draw the track 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int backgroundMask=0x7f01000f;
+        /**  the track drawable will be drawn on top of these background. So if
+             these back grounds were to be visible, the track has to have transparency 
+ The background when left side of the switch is visible 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int leftBackground=0x7f01000d;
         /**  Default style for the Switch widget. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int mySwitchStyleAttr=0x7f010014;
+        public static final int mySwitchStyleAttr=0x7f010018;
+        /**  if the switch should operate like iOS UISwitch 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pushStyle=0x7f010004;
+        /**  The background when right side of the switch is visible 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int rightBackground=0x7f01000e;
         /**  Minimum height for the switch component 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -24,7 +50,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int switchMinHeight=0x7f01000a;
+        public static final int switchMinHeight=0x7f01000b;
         /**  Minimum width for the switch component 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -35,7 +61,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int switchMinWidth=0x7f010009;
+        public static final int switchMinWidth=0x7f01000a;
         /**  Minimum space between the switch and caption text 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -46,12 +72,12 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int switchPadding=0x7f01000b;
+        public static final int switchPadding=0x7f01000c;
         /**  TextAppearance style for text displayed on the switch thumb. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int switchTextAppearanceAttrib=0x7f010008;
+        public static final int switchTextAppearanceAttrib=0x7f010009;
         /**  Present the text in ALL CAPS. This may use a small-caps form when available. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -60,7 +86,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textAllCaps=0x7f010013;
+        public static final int textAllCaps=0x7f010017;
         /**  Text color. 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -70,7 +96,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textColor=0x7f01000c;
+        public static final int textColor=0x7f010010;
         /**  Color of the text selection highlight. 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -80,7 +106,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textColorHighlight=0x7f010010;
+        public static final int textColorHighlight=0x7f010014;
         /**  Color of the hint text. 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -90,7 +116,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textColorHint=0x7f010011;
+        public static final int textColorHint=0x7f010015;
         /**  Color of the links. 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -100,7 +126,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textColorLink=0x7f010012;
+        public static final int textColorLink=0x7f010016;
         /**  Text to use when the switch is in the unchecked/"off" state. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -122,15 +148,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int textOnThumb=0x7f010005;
-        /**  if text should be drawn outside the track. 
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int textOutsideTrack=0x7f010004;
         /**  Size of the text. Recommended dimension type for text is "sp" for scaled-pixels (example: 15sp). 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -141,7 +158,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textSize=0x7f01000d;
+        public static final int textSize=0x7f010011;
         /**  Style (bold, italic, bolditalic) for the text. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -154,12 +171,23 @@ containing a value of this type.
 <tr><td><code>italic</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int textStyle=0x7f01000e;
+        public static final int textStyle=0x7f010012;
         /**  Drawable to use as the "thumb" that switches back and forth. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int thumb=0x7f010000;
+        /**  if the thumb should be allowed to move more beyond the switch boundaries 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int thumbExtraMovement=0x7f010006;
         /**  Amount of padding on either side of text within the switch thumb. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -170,7 +198,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int thumbTextPadding=0x7f010006;
+        public static final int thumbTextPadding=0x7f010007;
         /**  Drawable to use as the "track" that the switch thumb slides within. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -186,7 +214,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int trackTextPadding=0x7f010007;
+        public static final int trackTextPadding=0x7f010008;
         /**  Typeface (normal, sans, serif, monospace) for the text. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -202,16 +230,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monospace</code></td><td>3</td><td></td></tr>
 </table>
          */
-        public static final int typeface=0x7f01000f;
+        public static final int typeface=0x7f010013;
     }
     public static final class drawable {
         public static final int background_fenced=0x7f020000;
         public static final int background_raised=0x7f020001;
         public static final int ic_launcher=0x7f020002;
-        public static final int switch_thumb=0x7f020003;
-        public static final int switch_thumb32x32=0x7f020004;
-        public static final int switch_track=0x7f020005;
-        public static final int switch_track_green=0x7f020006;
+        public static final int rgroove_copy=0x7f020003;
+        public static final int rgroove_mask=0x7f020004;
+        public static final int rswitch_button_small=0x7f020005;
+        public static final int sgroove_copy=0x7f020006;
+        public static final int sleft_background_copy=0x7f020007;
+        public static final int sleft_background_copy1=0x7f020008;
+        public static final int smask_background_copy=0x7f020009;
+        public static final int sright_background_copy=0x7f02000a;
+        public static final int sright_background_copy1=0x7f02000b;
+        public static final int stoggle_copy=0x7f02000c;
+        public static final int stoggle_copy1=0x7f02000d;
+        public static final int switch_thumb=0x7f02000e;
+        public static final int switch_thumb32x32=0x7f02000f;
+        public static final int switch_track=0x7f020010;
+        public static final int switch_track_green=0x7f020011;
     }
     public static final class id {
         public static final int No=0x7f04000b;
@@ -220,6 +259,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int italic=0x7f040002;
         public static final int monospace=0x7f040005;
         public static final int normal=0x7f040000;
+        public static final int pickup2=0x7f04000c;
+        public static final int pickup3=0x7f04000d;
         public static final int sans=0x7f040003;
         public static final int serif=0x7f040004;
         public static final int switch1=0x7f040006;
@@ -246,6 +287,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MySwitch_backgroundMask com.appscumen.example:backgroundMask}</code></td><td> We need a mask drawable to mask the background, then draw the track </td></tr>
+           <tr><td><code>{@link #MySwitch_leftBackground com.appscumen.example:leftBackground}</code></td><td> the track drawable will be drawn on top of these background.</td></tr>
+           <tr><td><code>{@link #MySwitch_pushStyle com.appscumen.example:pushStyle}</code></td><td> if the switch should operate like iOS UISwitch </td></tr>
+           <tr><td><code>{@link #MySwitch_rightBackground com.appscumen.example:rightBackground}</code></td><td> The background when right side of the switch is visible </td></tr>
            <tr><td><code>{@link #MySwitch_switchMinHeight com.appscumen.example:switchMinHeight}</code></td><td> Minimum height for the switch component </td></tr>
            <tr><td><code>{@link #MySwitch_switchMinWidth com.appscumen.example:switchMinWidth}</code></td><td> Minimum width for the switch component </td></tr>
            <tr><td><code>{@link #MySwitch_switchPadding com.appscumen.example:switchPadding}</code></td><td> Minimum space between the switch and caption text </td></tr>
@@ -253,12 +298,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #MySwitch_textOff com.appscumen.example:textOff}</code></td><td> Text to use when the switch is in the unchecked/"off" state.</td></tr>
            <tr><td><code>{@link #MySwitch_textOn com.appscumen.example:textOn}</code></td><td> Text to use when the switch is in the checked/"on" state.</td></tr>
            <tr><td><code>{@link #MySwitch_textOnThumb com.appscumen.example:textOnThumb}</code></td><td> if text should be drawn on the Thumb or On the track.</td></tr>
-           <tr><td><code>{@link #MySwitch_textOutsideTrack com.appscumen.example:textOutsideTrack}</code></td><td> if text should be drawn outside the track.</td></tr>
            <tr><td><code>{@link #MySwitch_thumb com.appscumen.example:thumb}</code></td><td> Drawable to use as the "thumb" that switches back and forth.</td></tr>
+           <tr><td><code>{@link #MySwitch_thumbExtraMovement com.appscumen.example:thumbExtraMovement}</code></td><td> if the thumb should be allowed to move more beyond the switch boundaries </td></tr>
            <tr><td><code>{@link #MySwitch_thumbTextPadding com.appscumen.example:thumbTextPadding}</code></td><td> Amount of padding on either side of text within the switch thumb.</td></tr>
            <tr><td><code>{@link #MySwitch_track com.appscumen.example:track}</code></td><td> Drawable to use as the "track" that the switch thumb slides within.</td></tr>
            <tr><td><code>{@link #MySwitch_trackTextPadding com.appscumen.example:trackTextPadding}</code></td><td> Amount of padding on either side of text within the switch track.</td></tr>
            </table>
+           @see #MySwitch_backgroundMask
+           @see #MySwitch_leftBackground
+           @see #MySwitch_pushStyle
+           @see #MySwitch_rightBackground
            @see #MySwitch_switchMinHeight
            @see #MySwitch_switchMinWidth
            @see #MySwitch_switchPadding
@@ -266,8 +315,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #MySwitch_textOff
            @see #MySwitch_textOn
            @see #MySwitch_textOnThumb
-           @see #MySwitch_textOutsideTrack
            @see #MySwitch_thumb
+           @see #MySwitch_thumbExtraMovement
            @see #MySwitch_thumbTextPadding
            @see #MySwitch_track
            @see #MySwitch_trackTextPadding
@@ -275,8 +324,63 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int[] MySwitch = {
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
             0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f
         };
+        /**
+          <p>
+          @attr description
+           We need a mask drawable to mask the background, then draw the track 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:backgroundMask
+        */
+        public static final int MySwitch_backgroundMask = 15;
+        /**
+          <p>
+          @attr description
+           the track drawable will be drawn on top of these background. So if
+             these back grounds were to be visible, the track has to have transparency 
+ The background when left side of the switch is visible 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:leftBackground
+        */
+        public static final int MySwitch_leftBackground = 13;
+        /**
+          <p>
+          @attr description
+           if the switch should operate like iOS UISwitch 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:pushStyle
+        */
+        public static final int MySwitch_pushStyle = 4;
+        /**
+          <p>
+          @attr description
+           The background when right side of the switch is visible 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:rightBackground
+        */
+        public static final int MySwitch_rightBackground = 14;
         /**
           <p>
           @attr description
@@ -294,7 +398,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android:switchMinHeight
         */
-        public static final int MySwitch_switchMinHeight = 10;
+        public static final int MySwitch_switchMinHeight = 11;
         /**
           <p>
           @attr description
@@ -312,7 +416,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android:switchMinWidth
         */
-        public static final int MySwitch_switchMinWidth = 9;
+        public static final int MySwitch_switchMinWidth = 10;
         /**
           <p>
           @attr description
@@ -330,7 +434,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android:switchPadding
         */
-        public static final int MySwitch_switchPadding = 11;
+        public static final int MySwitch_switchPadding = 12;
         /**
           <p>
           @attr description
@@ -342,7 +446,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name android:switchTextAppearanceAttrib
         */
-        public static final int MySwitch_switchTextAppearanceAttrib = 8;
+        public static final int MySwitch_switchTextAppearanceAttrib = 9;
         /**
           <p>
           @attr description
@@ -388,22 +492,6 @@ containing a value of this type.
         /**
           <p>
           @attr description
-           if text should be drawn outside the track. 
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android:textOutsideTrack
-        */
-        public static final int MySwitch_textOutsideTrack = 4;
-        /**
-          <p>
-          @attr description
            Drawable to use as the "thumb" that switches back and forth. 
 
 
@@ -413,6 +501,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name android:thumb
         */
         public static final int MySwitch_thumb = 0;
+        /**
+          <p>
+          @attr description
+           if the thumb should be allowed to move more beyond the switch boundaries 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:thumbExtraMovement
+        */
+        public static final int MySwitch_thumbExtraMovement = 6;
         /**
           <p>
           @attr description
@@ -430,7 +536,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android:thumbTextPadding
         */
-        public static final int MySwitch_thumbTextPadding = 6;
+        public static final int MySwitch_thumbTextPadding = 7;
         /**
           <p>
           @attr description
@@ -460,7 +566,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android:trackTextPadding
         */
-        public static final int MySwitch_trackTextPadding = 7;
+        public static final int MySwitch_trackTextPadding = 8;
         /** Attributes that can be used with a mySwitchTextAppearanceAttrib.
            <p>Includes the following attributes:</p>
            <table>
@@ -486,8 +592,8 @@ containing a value of this type.
            @see #mySwitchTextAppearanceAttrib_typeface
          */
         public static final int[] mySwitchTextAppearanceAttrib = {
-            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
-            0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013
+            0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013,
+            0x7f010014, 0x7f010015, 0x7f010016, 0x7f010017
         };
         /**
           <p>
