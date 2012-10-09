@@ -5,4 +5,4 @@ The related discussion on stackoverflow.
 http://stackoverflow.com/questions/9752760/slide-toggle-for-android
 
 
-![ScreenShot] (https://github.com/pellucide/Android-Switch-Demo-pre-4.0/android-switch-demo/raw/master/Screenshotpng)
+![ScreenShot] (https://github.com/pellucide/Android-Switch-Demo-pre-4.0/blob/master/android-switch-demo/Screenshot.png)
