@@ -23,10 +23,11 @@ public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttem
         no = (TextView)findViewById(R.id.No);
         slideToUnLock.toggle();
         slideToUnLock.disableClick();
+        slideToUnLock.fixate(true);
         publishToggle.setOnCheckedChangeListener(this);
 		yes.setEnabled(false);
 		no.setEnabled(true);
-		no.setTextScaleX(1.2f);
+		//no.setTextScaleX(1.2f);
     }
 	@Override
 	public void onChangeAttempted(boolean isChecked) {
@@ -36,15 +37,15 @@ public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttem
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		if (isChecked){
 			yes.setEnabled(true);
-		    yes.setTextScaleX(1.2f);
+		    //yes.setTextScaleX(1.2f);
 			no.setEnabled(false);
-		    no.setTextScaleX(1.0f);
+		    //no.setTextScaleX(1.0f);
 			}
 		else {
 			yes.setEnabled(false);
-		    yes.setTextScaleX(1.0f);
+		    //yes.setTextScaleX(1.0f);
 			no.setEnabled(true);
-		    no.setTextScaleX(1.2f);
+		    //no.setTextScaleX(1.2f);
 		}
 		// TODO Auto-generated method stub
 	}

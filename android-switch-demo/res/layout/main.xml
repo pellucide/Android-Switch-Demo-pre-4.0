@@ -3,13 +3,13 @@
     xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FF555555"
+    android:background="@drawable/background5"
     android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.appscumen.example">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Switch with Text on Toggle" />
+        android:text="Examples" />
 
     <com.appscumen.example.MySwitch
         android:id="@+id/switch1"
@@ -21,12 +21,12 @@
         android:layout_marginRight="4dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
-        mySwitch:textOff="NotToBe"
+        mySwitch:textOff="Not To Be"
         mySwitch:textOn="ToBe" />
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="15dp" />
+        android:layout_height="11dp" />
 
     
     <com.appscumen.example.MySwitch
@@ -62,12 +62,12 @@
         mySwitch:textOff=" "
         mySwitch:textOn=" Slide to unlock "
         mySwitch:textOnThumb="false"
-        mySwitch:thumb="@drawable/switch_thumb"
+        mySwitch:thumb="@drawable/switch_thumb_arrow"
         mySwitch:track="@drawable/switch_track" />
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="15dp" />
+        android:layout_height="11dp" />
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -86,8 +86,8 @@
             android:layout_marginRight="4dp"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            mySwitch:textOff=" "
-            mySwitch:textOn=" "
+            mySwitch:textOff=""
+            mySwitch:textOn=""
             mySwitch:textOnThumb="false"
             mySwitch:thumb="@drawable/switch_thumb"
             mySwitch:track="@drawable/switch_track" />
@@ -98,7 +98,8 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/switch4"
             android:id="@+id/Yes"
-            android:text="Yes  " />
+            android:textSize="17dp"
+            android:text="Left " />
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,7 +107,8 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/switch4"
             android:id="@+id/No"
-            android:text=" No" />
+            android:textSize="17dp"
+            android:text=" Right" />
     </RelativeLayout>
     <View
         android:layout_width="fill_parent"
@@ -128,8 +130,10 @@
                     mySwitch:thumb="@drawable/rswitch_button_small"
                     mySwitch:track="@drawable/rgroove_copy"
                     mySwitch:backgroundMask="@drawable/rgroove_mask"
-                    mySwitch:textOn="Right"
-                    mySwitch:textOff="Left" 
+                    mySwitch:leftBackground="@drawable/green_drawable"
+                    mySwitch:rightBackground="@drawable/red_drawable"
+                    mySwitch:textOn="Girl"
+                    mySwitch:textOff="Boy" 
                     /> 
                     
       
@@ -149,8 +153,8 @@
                     mySwitch:trackTextPadding="2dp"
                     mySwitch:thumb="@drawable/stoggle_copy"
                     mySwitch:track="@drawable/sgroove_copy"
-                    mySwitch:textOn="OnText(Right)"
-                    mySwitch:textOff="OffText(Left)" 
+                    mySwitch:textOn="Coke"
+                    mySwitch:textOff="Pepsi" 
                     mySwitch:leftBackground="@drawable/sleft_background_copy"
                     mySwitch:rightBackground="@drawable/sright_background_copy"
                     mySwitch:backgroundMask="@drawable/smask_background_copy"
@@ -172,8 +176,8 @@
                     mySwitch:trackTextPadding="2dp"
                     mySwitch:thumb="@drawable/stoggle_copy1"
                     mySwitch:track="@drawable/sgroove_copy"
-                    mySwitch:textOn="Off"
-                    mySwitch:textOff="On" 
+                    mySwitch:textOn="Pickup"
+                    mySwitch:textOff="Delivery" 
                     mySwitch:leftBackground="@drawable/sleft_background_copy1"
                     mySwitch:rightBackground="@drawable/sright_background_copy1"
                     mySwitch:backgroundMask="@drawable/smask_background_copy"

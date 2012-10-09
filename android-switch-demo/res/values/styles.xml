@@ -17,7 +17,7 @@
 
 	 <style name="mySwitchStyle">
         <item name="track">@drawable/switch_track_green</item>
-        <item name="thumb">@drawable/background_raised</item>  
+        <item name="thumb">@drawable/background_fenced</item>  
         <item name="switchTextAppearanceAttrib">@style/mySwitchTextAppearance</item>
         <item name="textOn">ON</item>
         <item name="textOff">OFF</item>

@@ -176,6 +176,9 @@ public class MySwitch extends CompoundButton {
         //if (mRightBackground == null) {
         	//mRightBackground = new ColorDrawable(0x993322BB);
         //}
+        
+        //Log.d(TAG, "mLeftBackground="+mLeftBackground);
+        //Log.d(TAG, "mRightBackground="+mRightBackground);
         mThumbDrawable = a.getDrawable(R.styleable.MySwitch_thumb);
         mTrackDrawable = a.getDrawable(R.styleable.MySwitch_track);
         mTextOn = a.getText(R.styleable.MySwitch_textOn);

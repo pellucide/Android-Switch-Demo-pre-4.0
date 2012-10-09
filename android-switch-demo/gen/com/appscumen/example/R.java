@@ -233,24 +233,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int typeface=0x7f010013;
     }
     public static final class drawable {
-        public static final int background_fenced=0x7f020000;
-        public static final int background_raised=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int rgroove_copy=0x7f020003;
-        public static final int rgroove_mask=0x7f020004;
-        public static final int rswitch_button_small=0x7f020005;
-        public static final int sgroove_copy=0x7f020006;
-        public static final int sleft_background_copy=0x7f020007;
-        public static final int sleft_background_copy1=0x7f020008;
-        public static final int smask_background_copy=0x7f020009;
-        public static final int sright_background_copy=0x7f02000a;
-        public static final int sright_background_copy1=0x7f02000b;
-        public static final int stoggle_copy=0x7f02000c;
-        public static final int stoggle_copy1=0x7f02000d;
-        public static final int switch_thumb=0x7f02000e;
-        public static final int switch_thumb32x32=0x7f02000f;
-        public static final int switch_track=0x7f020010;
-        public static final int switch_track_green=0x7f020011;
+        public static final int arrow_button64x49=0x7f020000;
+        public static final int arrow_button72x72=0x7f020001;
+        public static final int background5=0x7f020002;
+        public static final int background_fenced=0x7f020003;
+        public static final int background_raised=0x7f020004;
+        public static final int green_drawable=0x7f020017;
+        public static final int ic_launcher=0x7f020005;
+        public static final int red_drawable=0x7f020016;
+        public static final int rgroove_copy=0x7f020006;
+        public static final int rgroove_mask=0x7f020007;
+        public static final int rswitch_button_small=0x7f020008;
+        public static final int sgroove_copy=0x7f020009;
+        public static final int sleft_background_copy=0x7f02000a;
+        public static final int sleft_background_copy1=0x7f02000b;
+        public static final int smask_background_copy=0x7f02000c;
+        public static final int sright_background_copy=0x7f02000d;
+        public static final int sright_background_copy1=0x7f02000e;
+        public static final int stoggle_copy=0x7f02000f;
+        public static final int stoggle_copy1=0x7f020010;
+        public static final int switch_thumb=0x7f020011;
+        public static final int switch_thumb32x32=0x7f020012;
+        public static final int switch_thumb_arrow=0x7f020013;
+        public static final int switch_track=0x7f020014;
+        public static final int switch_track_green=0x7f020015;
     }
     public static final class id {
         public static final int No=0x7f04000b;
