@@ -26,7 +26,7 @@
         <item name="thumbExtraMovement">0dp</item>
         <item name="thumbTextPadding">6dp</item>
         <item name="trackTextPadding">6dp</item>
-        <item name="switchMinWidth">96dp</item>
+        <item name="switchMinWidth">69dp</item>
         <item name="switchMinHeight">36dp</item>
         <item name="switchPadding">6dp</item>
     </style>

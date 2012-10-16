@@ -10,6 +10,12 @@
         <attr name="textOn" format="reference|string" />
         <!-- Text to use when the switch is in the unchecked/"off" state. -->
         <attr name="textOff" format="reference|string" />
+        
+        <!-- drawablw to use when the switch is in the checked/"on" state. -->
+        <attr name="drawableOn" format="reference" />
+        <!-- drawablw to use when the switch is in the unchecked/"off" state. -->
+        <attr name="drawableOff" format="reference" />
+        
         <!-- if the switch should operate like iOS UISwitch -->
         <attr name="pushStyle" format="boolean" />
         <!-- if text should be drawn on the Thumb or On the track. -->
@@ -28,6 +34,13 @@
         <attr name="switchMinHeight" format="dimension" />
         <!-- Minimum space between the switch and caption text -->
         <attr name="switchPadding" format="dimension" />
+        
+        <attr name="orientation" >
+            <!-- the switch moves only on the x-axis(horizontally) -->
+            <enum name="horizontal" value="1" />
+            <!-- the switch moves only on the y-axis(vertically) -->
+            <enum name="vertical" value="0" />
+        </attr>
         
         <!-- the track drawable will be drawn on top of these background. So if
              these back grounds were to be visible, the track has to have transparency -->
