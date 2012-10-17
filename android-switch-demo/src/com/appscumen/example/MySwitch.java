@@ -814,7 +814,7 @@ public class MySwitch extends CompoundButton {
         	if (mTextOnThumb == false) {
         		switchWidth = Math.max(  maxTextWidth
         				+ mThumbWidth + mTrackTextPadding * 2
-        				+ mTrackPaddingRect.right + mTrackPaddingRect.left
+        				+ (mTrackPaddingRect.right + mTrackPaddingRect.left)/2
         				, mSwitchMinWidth);        	                      
         	}
 
@@ -848,9 +848,9 @@ public class MySwitch extends CompoundButton {
        			    mTrackPaddingRect.bottom + mTrackPaddingRect.top+
         			mTrackTextPadding * 2 ;
       	    if (mTextOnThumb == false) {
-      	    	switchHeight = mThumbHeight + maxTextHeight +
-        			    mTrackPaddingRect.bottom + mTrackPaddingRect.top+
-        			    mTrackTextPadding * 2 ;
+      	    	switchHeight = Math.max(mThumbHeight + maxTextHeight +
+        			    (mTrackPaddingRect.bottom + mTrackPaddingRect.top)/2 +
+        			    mTrackTextPadding * 2, mSwitchMinHeight) ;
       	    }
       	    if (this.mPushStyle) {
         		switchHeight = Math.max(mSwitchMinHeight, maxTextHeight+ mThumbHeight +
@@ -1172,7 +1172,12 @@ public class MySwitch extends CompoundButton {
         		if (rightBitmap != null) {
         			canvas.save();
         			if (canvas.getClipBounds(canvasClipBounds)) {
-        				canvasClipBounds.left += (mThumbPosition+ mThumbWidth/2);
+        				if (this.mOrientation == HORIZONTAL) {
+        					canvasClipBounds.left += (thumbPos+ mThumbWidth/2);
+        				}
+        				if (this.mOrientation == VERTICAL) {
+        					canvasClipBounds.top += (thumbPos+ mThumbHeight/2);
+        				}
         				canvas.clipRect(canvasClipBounds);
         			}
         			canvas.drawBitmap(rightBitmap, 0, 0, null);
@@ -1182,7 +1187,12 @@ public class MySwitch extends CompoundButton {
         		if (leftBitmap != null) {
         			canvas.save();
         			if (canvas.getClipBounds(canvasClipBounds)) {
-        				canvasClipBounds.right -= (thumbRange- mThumbPosition + mThumbWidth/2);
+        				if (this.mOrientation == HORIZONTAL) {
+        					canvasClipBounds.right -= (thumbRange- thumbPos + mThumbWidth/2);
+        				}
+        				if (this.mOrientation == VERTICAL) {
+        					canvasClipBounds.bottom = (canvasClipBounds.top+ thumbPos + mThumbHeight/2);
+        				}
         				canvas.clipRect(canvasClipBounds);
         			}
         			canvas.drawBitmap(leftBitmap, 0, 0, null);
@@ -1192,6 +1202,7 @@ public class MySwitch extends CompoundButton {
         		//draw the track
         		mTrackDrawable.draw(canvas);
 
+        		canvas.save();
         		// evaluate the coordinates for drawing the Thumb and Text
         		canvas.clipRect(switchInnerLeft, mSwitchTop, switchInnerRight, mSwitchBottom);
 
@@ -1211,7 +1222,7 @@ public class MySwitch extends CompoundButton {
        	        thumbBoundB = thumbBoundT  + mThumbHeight;
         		canvas.save();
         		canvas.translate(0, (thumbBoundT + thumbBoundB) / 2 - mOnLayout.getHeight()/2 );
-                if (mDrawableOn != null) mDrawableOn.draw(canvas);       		
+                if ((mDrawableOn != null) && (mTextPaint.getAlpha() == alpha)) mDrawableOn.draw(canvas);       		
         		canvas.translate((mSwitchLeft + mSwitchRight) / 2 - mOnLayout.getWidth() / 2, 0);
         		mOnLayout.draw(canvas);
         		
@@ -1232,11 +1243,11 @@ public class MySwitch extends CompoundButton {
        	        thumbBoundB = thumbBoundT  + mThumbHeight;
         		canvas.save();
         		canvas.translate(0, (thumbBoundT + thumbBoundB) / 2 - mOffLayout.getHeight()/2 );
-        		if (mDrawableOff != null) mDrawableOff.draw(canvas);
+        		if ((mDrawableOff != null) && (mTextPaint.getAlpha() == alpha))  mDrawableOff.draw(canvas);
         		canvas.translate((mSwitchLeft + mSwitchRight) / 2 - mOffLayout.getWidth() / 2, 0);
         		mOffLayout.draw(canvas);
         		canvas.restore();
-        		
+        		canvas.restore();
         	}
 
         	
@@ -1244,6 +1255,7 @@ public class MySwitch extends CompoundButton {
        	    thumbBoundB = switchInnerTop + thumbPos - mThumbExtraMovement + mThumbHeight;
         	//Draw the Thumb
         	Log.d(TAG, "thumbBoundT, thumbBoundB=("+thumbBoundT+","+thumbBoundB+")");
+        	Log.d(TAG, "mSwitchLeft, mSwitchRight=("+mSwitchLeft+","+mSwitchRight+")");
         	mThumbDrawable.setBounds(mSwitchLeft, thumbBoundT, mSwitchRight, thumbBoundB);
         	mThumbDrawable.draw(canvas);
 

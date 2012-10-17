@@ -17,7 +17,6 @@ public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttem
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        /*
         slideToUnLock = (MySwitch)findViewById(R.id.switch3);
         publishToggle = (MySwitch)findViewById(R.id.switch4);
         yes = (TextView)findViewById(R.id.Yes);
@@ -29,7 +28,6 @@ public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttem
 		yes.setEnabled(false);
 		no.setEnabled(true);
 		//no.setTextScaleX(1.2f);
-		 */
     }
 	@Override
 	public void onChangeAttempted(boolean isChecked) {

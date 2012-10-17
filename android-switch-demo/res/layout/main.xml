@@ -10,7 +10,8 @@
     android:layout_height="wrap_content"
     android:background="@drawable/background5"
     android:orientation="vertical" >
-<!--
+    <!--
+  -->
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -53,7 +54,7 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="11dp" />
+        android:layout_height="6dp" />
 
     
 <LinearLayout
@@ -99,9 +100,12 @@
     
     <View
         android:layout_width="fill_parent"
-        android:layout_height="11dp" />
+        android:layout_height="6dp" />
 
-
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
     <com.appscumen.example.MySwitch
         android:id="@+id/switch3"
         style="@style/mySwitchStyle"
@@ -118,11 +122,7 @@
         mySwitch:thumb="@drawable/switch_thumb_arrow"
         mySwitch:track="@drawable/switch_track" />
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="11dp" />
-
-    <RelativeLayout
+        <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
             android:layout_toLeftOf="@id/switch4"
             android:id="@+id/Yes"
             android:textSize="17dp"
-            android:text="Left " />
+            android:text="L " />
 
         <TextView
             android:layout_width="wrap_content"
@@ -161,12 +161,23 @@
             android:layout_toRightOf="@id/switch4"
             android:id="@+id/No"
             android:textSize="17dp"
-            android:text=" Right" />
+            android:text=" R" />
     </RelativeLayout>
+  </LinearLayout>  
+        
     <View
         android:layout_width="fill_parent"
-        android:layout_height="11dp" />
+        android:layout_height="6dp" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="6dp" />
     
+   <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" > 
     
            <com.appscumen.example.MySwitch
                     style="@style/mySwitchStyle"
@@ -188,8 +199,34 @@
                     mySwitch:textOn="Girl"
                     mySwitch:textOff="Boy" 
                     /> 
-                    
+            <com.appscumen.example.MySwitch
+                    style="@style/mySwitchStyle"
+                    android:id="@+id/pickup2"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    mySwitch:orientation="vertical"
+                    mySwitch:textOnThumb="false"
+                    mySwitch:thumbExtraMovement="22dp"
+                    mySwitch:thumb="@drawable/rswitch_button_small"
+                    mySwitch:track="@drawable/rgroove_copy_vert"
+                    mySwitch:backgroundMask="@drawable/rgroove_mask_vert"
+                    mySwitch:leftBackground="@drawable/green_drawable"
+                    mySwitch:rightBackground="@drawable/red_drawable"
+                    mySwitch:textOn="Girl"
+                    mySwitch:textOff="Boy" 
+                    /> 
+                    </LinearLayout>
       
+      <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" > 
+    
            <com.appscumen.example.MySwitch
                     style="@style/mySwitchStyle"
                     android:id="@+id/pickup3"
@@ -213,6 +250,32 @@
                     mySwitch:backgroundMask="@drawable/smask_background_copy"
                     /> 
                     
+                <com.appscumen.example.MySwitch
+                    style="@style/mySwitchStyle"
+                    android:id="@+id/pickup5"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    mySwitch:orientation="vertical"
+                    mySwitch:pushStyle="false"
+                    mySwitch:textOnThumb="false"
+                    mySwitch:thumbExtraMovement="12dp"
+                    mySwitch:trackTextPadding="6dp"
+                    mySwitch:thumbTextPadding="2dp"
+                    mySwitch:switchMinWidth="19dp"
+                    mySwitch:switchMinHeight="16dp"
+                    mySwitch:textOn=""
+                    mySwitch:textOff="" 
+                    mySwitch:thumb="@drawable/vswitch_thumb"
+                    mySwitch:track="@drawable/vswitch_trac1k"
+                    mySwitch:drawableOn="@drawable/vswitch_on_drawable"
+                    mySwitch:drawableOff="@drawable/vswitch_off_drawable"
+                    /> 
+                    </LinearLayout>
 <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -268,32 +331,7 @@
                     /> 
                     </LinearLayout>
 
--->
-             <com.appscumen.example.MySwitch
-                    style="@style/mySwitchStyle"
-                    android:id="@+id/pickup5"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginRight="4dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    mySwitch:orientation="vertical"
-                    mySwitch:pushStyle="false"
-                    mySwitch:textOnThumb="false"
-                    mySwitch:thumbExtraMovement="1dp"
-                    mySwitch:trackTextPadding="2dp"
-                    mySwitch:thumbTextPadding="2dp"
-                    mySwitch:switchMinWidth="29dp"
-                    mySwitch:switchMinHeight="26dp"
-                    mySwitch:textOn="O"
-                    mySwitch:textOff="1" 
-                    mySwitch:thumb="@drawable/vswitch_thumb"
-                    mySwitch:track="@drawable/vswitch_track"
-                    mySwitch:drawableOn="@drawable/vswitch_on_drawable"
-                    mySwitch:drawableOff="@drawable/vswitch_off_drawable"
-                    /> 
+                    
 
 <!--
 <LinearLayout
