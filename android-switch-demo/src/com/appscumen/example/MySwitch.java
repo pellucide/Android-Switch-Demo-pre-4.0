@@ -1141,7 +1141,7 @@ public class MySwitch extends CompoundButton {
         		
         		mTrackDrawable.draw(canvas);
         		
-        		backingLayer.drawColor(0x01000000, Mode.DST_IN);
+        		backingLayer.drawColor(0xff000000, Mode.DST_IN);
         		backingLayer.save();
         		backingLayer.translate(0,-thumbRange+thumbPos);
         		backingLayer.translate(0,mTrackPaddingRect.top);
@@ -1298,7 +1298,7 @@ public class MySwitch extends CompoundButton {
         		canvas.drawBitmap(tempBitmap, 0, 0, null);
         		mTrackDrawable.draw(canvas);
 
-        		backingLayer.drawColor(0x01000000, Mode.DST_IN);
+        		backingLayer.drawColor(0xff000000, Mode.DST_IN);
         		backingLayer.save();
         		backingLayer.translate(-thumbRange+thumbPos,0);
         		backingLayer.translate(mTrackPaddingRect.left, 0);
