@@ -972,13 +972,7 @@ public class MySwitch extends CompoundButton {
             //Log.d(TAG,"mask width="+maskBitmap.getWidth()+" mask.height="+maskBitmap.getHeight());
             //Log.d(TAG,"mask 0,0="+String.format("%x", (maskBitmap.getPixel(0,0)))+" mask 40,40="+String.format("%x", (maskBitmap.getPixel(40,40))));
         
-            maskBitmap = Bitmap.createBitmap(mSwitchRight - mSwitchLeft, mSwitchBottom - mSwitchTop,  Config.ARGB_8888);
-            int width = tempBitmap.getWidth(),  height = tempBitmap.getHeight();
-            for (int x=0; x<width; x++) {
-                for (int y=0; y<height; y++) {
-        	        maskBitmap.setPixel(x, y, (tempBitmap.getPixel(x,y) & 0xFF000000));
-                }
-            }
+            maskBitmap = tempBitmap.extractAlpha();
         
             //Log.d(TAG,"mask 0,0="+String.format("%x", (maskBitmap.getPixel(0,0)))+" mask 40,40="+String.format("%x", (maskBitmap.getPixel(40,40))));
 
