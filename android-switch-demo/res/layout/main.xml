@@ -123,7 +123,6 @@
         mySwitch:track="@drawable/switch_track" />
 
         <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
@@ -292,7 +291,7 @@
                     android:layout_height="wrap_content"
                     mySwitch:pushStyle="true"
                     mySwitch:textOnThumb="false"
-                    mySwitch:thumbExtraMovement="27dp"
+                    mySwitch:thumbExtraMovement="25dp"
                     mySwitch:trackTextPadding="2dp"
                     mySwitch:thumb="@drawable/stoggle_copy1"
                     mySwitch:track="@drawable/sgroove_copy"
