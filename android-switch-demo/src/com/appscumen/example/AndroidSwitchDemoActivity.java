@@ -4,11 +4,13 @@ import com.appscumen.example.MySwitch.OnChangeAttemptListener;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 
 public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttemptListener, OnCheckedChangeListener {
+	public static final String TAG = AndroidSwitchDemoActivity.class.getSimpleName();
 	MySwitch slideToUnLock;
 	MySwitch publishToggle;
 	TextView yes, no;
@@ -31,10 +33,13 @@ public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttem
     }
 	@Override
 	public void onChangeAttempted(boolean isChecked) {
-
+		Log.d(TAG,"onChangeAttemped(checked = "+isChecked+")");
 	}
+
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+		Log.d(TAG,"onChechedChanged(checked = "+isChecked+")");
 		if (isChecked){
 			yes.setEnabled(true);
 		    //yes.setTextScaleX(1.2f);

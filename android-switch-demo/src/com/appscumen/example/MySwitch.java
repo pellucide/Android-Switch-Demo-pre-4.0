@@ -730,6 +730,7 @@ public class MySwitch extends CompoundButton {
         mThumbPosition = lc ? getThumbScrollRange() : 0;
         invalidate();
     }
+    /*
     protected void onLayout_orig(boolean changed, int left, int top, int right, int bottom) {
 		//Log.d(TAG, "left=" + left + ",top="+top+",right="+right+",bottom="+bottom);
         super.onLayout(changed, left, top, right, bottom);
@@ -766,6 +767,7 @@ public class MySwitch extends CompoundButton {
         //Log.d(TAG, "mSwitchLeft="+mSwitchLeft+" mSwitchRight="+mSwitchRight);
         //Log.d(TAG, "mSwitchTop="+mSwitchTop+" mSwitchBottom="+mSwitchBottom);
     }
+    */
 
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -971,9 +973,18 @@ public class MySwitch extends CompoundButton {
             mMaskDrawable.draw(backingLayer);
             //Log.d(TAG,"mask width="+maskBitmap.getWidth()+" mask.height="+maskBitmap.getHeight());
             //Log.d(TAG,"mask 0,0="+String.format("%x", (maskBitmap.getPixel(0,0)))+" mask 40,40="+String.format("%x", (maskBitmap.getPixel(40,40))));
-        
-            maskBitmap = tempBitmap.extractAlpha();
-        
+
+            maskBitmap = Bitmap.createBitmap(mSwitchRight - mSwitchLeft, mSwitchBottom - mSwitchTop,  Config.ARGB_8888);
+            int width = tempBitmap.getWidth(),  height = tempBitmap.getHeight();
+            for (int x=0; x<width; x++) {
+            	for (int y=0; y<height; y++) {
+            		maskBitmap.setPixel(x, y, (tempBitmap.getPixel(x,y) & 0xFF000000));
+            	}
+            }
+
+            //This should work. But does not work on any of the devices I have Nexus 4, Nexus7, Nexus10
+            //maskBitmap = tempBitmap.extractAlpha();
+
             //Log.d(TAG,"mask 0,0="+String.format("%x", (maskBitmap.getPixel(0,0)))+" mask 40,40="+String.format("%x", (maskBitmap.getPixel(40,40))));
 
             if (mLeftBackground != null) {
@@ -1141,7 +1152,7 @@ public class MySwitch extends CompoundButton {
         		
         		mTrackDrawable.draw(canvas);
         		
-        		backingLayer.drawColor(0xff000000, Mode.DST_IN);
+        		backingLayer.drawColor(0x01000000, Mode.DST_IN);
         		backingLayer.save();
         		backingLayer.translate(0,-thumbRange+thumbPos);
         		backingLayer.translate(0,mTrackPaddingRect.top);
@@ -1298,7 +1309,7 @@ public class MySwitch extends CompoundButton {
         		canvas.drawBitmap(tempBitmap, 0, 0, null);
         		mTrackDrawable.draw(canvas);
 
-        		backingLayer.drawColor(0xff000000, Mode.DST_IN);
+        		backingLayer.drawColor(0x01000000, Mode.DST_IN);
         		backingLayer.save();
         		backingLayer.translate(-thumbRange+thumbPos,0);
         		backingLayer.translate(mTrackPaddingRect.left, 0);
