@@ -166,6 +166,9 @@ public class MySwitch extends CompoundButton {
     public MySwitch(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
+        if (Build.VERSION.SDK_INT >= 11) {
+            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        }
         mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         Resources res = getResources();
         mTextPaint.density = res.getDisplayMetrics().density;
@@ -730,6 +733,7 @@ public class MySwitch extends CompoundButton {
         mThumbPosition = lc ? getThumbScrollRange() : 0;
         invalidate();
     }
+    /*
     protected void onLayout_orig(boolean changed, int left, int top, int right, int bottom) {
 		//Log.d(TAG, "left=" + left + ",top="+top+",right="+right+",bottom="+bottom);
         super.onLayout(changed, left, top, right, bottom);
@@ -766,6 +770,7 @@ public class MySwitch extends CompoundButton {
         //Log.d(TAG, "mSwitchLeft="+mSwitchLeft+" mSwitchRight="+mSwitchRight);
         //Log.d(TAG, "mSwitchTop="+mSwitchTop+" mSwitchBottom="+mSwitchBottom);
     }
+    */
 
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -971,15 +976,18 @@ public class MySwitch extends CompoundButton {
             mMaskDrawable.draw(backingLayer);
             //Log.d(TAG,"mask width="+maskBitmap.getWidth()+" mask.height="+maskBitmap.getHeight());
             //Log.d(TAG,"mask 0,0="+String.format("%x", (maskBitmap.getPixel(0,0)))+" mask 40,40="+String.format("%x", (maskBitmap.getPixel(40,40))));
-        
+
             maskBitmap = Bitmap.createBitmap(mSwitchRight - mSwitchLeft, mSwitchBottom - mSwitchTop,  Config.ARGB_8888);
             int width = tempBitmap.getWidth(),  height = tempBitmap.getHeight();
             for (int x=0; x<width; x++) {
-                for (int y=0; y<height; y++) {
-        	        maskBitmap.setPixel(x, y, (tempBitmap.getPixel(x,y) & 0xFF000000));
-                }
+            	for (int y=0; y<height; y++) {
+            		maskBitmap.setPixel(x, y, (tempBitmap.getPixel(x,y) & 0xFF000000));
+            	}
             }
-        
+
+            //This should work. But does not work on any of the devices I have Nexus 4, Nexus7, Nexus10
+            //maskBitmap = tempBitmap.extractAlpha();
+
             //Log.d(TAG,"mask 0,0="+String.format("%x", (maskBitmap.getPixel(0,0)))+" mask 40,40="+String.format("%x", (maskBitmap.getPixel(40,40))));
 
             if (mLeftBackground != null) {
