@@ -4,8 +4,7 @@
     xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
+<LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/background5"
@@ -123,7 +122,6 @@
         mySwitch:track="@drawable/switch_track" />
 
         <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
@@ -249,7 +247,28 @@
                     mySwitch:rightBackground="@drawable/sright_background_copy"
                     mySwitch:backgroundMask="@drawable/smask_background_copy"
                     /> 
-                    
+                            <com.appscumen.example.MySwitch
+                    style="@style/mySwitchStyle"
+                    android:id="@+id/pickup4"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    mySwitch:pushStyle="true"
+                    mySwitch:textOnThumb="false"
+                    mySwitch:thumbExtraMovement="9dp"
+                    mySwitch:trackTextPadding="1dp"
+                    mySwitch:thumb="@drawable/stoggle_copy_sm"
+                    mySwitch:track="@drawable/sgroove_copy_sm"
+                    mySwitch:textOn=" Yes"
+                    mySwitch:textOff="No" 
+                    mySwitch:leftBackground="@drawable/sleft_background_copy_sm"
+                    mySwitch:rightBackground="@drawable/sright_background_copy_sm"
+                    mySwitch:backgroundMask="@drawable/smask_background_copy_sm"
+                    /> 
                 <com.appscumen.example.MySwitch
                     style="@style/mySwitchStyle"
                     android:id="@+id/pickup5"
