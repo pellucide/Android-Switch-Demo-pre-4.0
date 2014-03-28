@@ -29,7 +29,6 @@ public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttem
         publishToggle.setOnCheckedChangeListener(this);
 		yes.setEnabled(false);
 		no.setEnabled(true);
-		//no.setTextScaleX(1.2f);
     }
 	@Override
 	public void onChangeAttempted(boolean isChecked) {

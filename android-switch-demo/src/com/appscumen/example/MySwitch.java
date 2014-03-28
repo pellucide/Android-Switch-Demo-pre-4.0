@@ -38,11 +38,13 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.View;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.ViewConfiguration;
 import android.widget.CompoundButton;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 
 
 /**
@@ -166,9 +168,9 @@ public class MySwitch extends CompoundButton {
     public MySwitch(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        if (Build.VERSION.SDK_INT >= 11) {
-            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-        }
+        //if (Build.VERSION.SDK_INT >= 11) {
+            //setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        //}
         mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         Resources res = getResources();
         mTextPaint.density = res.getDisplayMetrics().density;
