@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Switch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background5"
+    android:orientation="vertical" >
+    <!--
+  -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Examples" />
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    <com.appscumen.example.Switch
+        android:id="@+id/switch1"
+        style="@style/SwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="9dp"
+        android:gravity="center"
+        Switch:textOff="Not To Be"
+        Switch:textOn="ToBe" />
+
+    <View android:layout_height="fill_parent"
+        android:layout_width="21dp" />
+    <com.appscumen.example.Switch
+        android:id="@+id/switch11"
+        style="@style/SwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="right"
+        Switch:orientation="vertical"
+        Switch:textOff="Not To Be"
+        Switch:textOn="ToBe" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="6dp" />
+
+    
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    <com.appscumen.example.Switch
+        android:id="@+id/switch2"
+        style="@style/SwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="9dp"
+        android:gravity="center"
+        Switch:textOff="OFF"
+        Switch:textOn="ON"
+        Switch:textOnThumb="false"
+        Switch:thumb_drawable="@drawable/switch_thumb"
+        Switch:track_drawable="@drawable/switch_track" />
+    <View android:layout_height="fill_parent"
+        android:layout_width="21dp" />
+    <com.appscumen.example.Switch
+        android:id="@+id/switch21"
+        style="@style/SwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="right"
+        Switch:orientation="vertical"
+        Switch:textOff="OFF"
+        Switch:textOn="ON"
+        Switch:textOnThumb="false"
+        Switch:thumb_drawable="@drawable/gold1"
+        Switch:track_drawable="@drawable/switch_track" />
+    </LinearLayout>
+    
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="6dp" />
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    <com.appscumen.example.Switch
+        android:id="@+id/switch3"
+        style="@style/SwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        Switch:textOff=" "
+        Switch:textOn=" Slide to unlock "
+        Switch:textOnThumb="false"
+        Switch:thumb_drawable="@drawable/switch_thumb_arrow"
+        Switch:track_drawable="@drawable/switch_track" />
+
+        <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.appscumen.example.Switch
+            android:id="@+id/switch4"
+            style="@style/SwitchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            Switch:textOff=""
+            Switch:textOn=""
+            Switch:textOnThumb="false"
+            Switch:thumb_drawable="@drawable/switch_thumb"
+            Switch:track_drawable="@drawable/switch_track" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/switch4"
+            android:id="@+id/Yes"
+            android:textSize="17dp"
+            android:text="L " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/switch4"
+            android:id="@+id/No"
+            android:textSize="17dp"
+            android:text=" R" />
+    </RelativeLayout>
+  </LinearLayout>  
+        
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="6dp" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="6dp" />
+    
+   <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" > 
+    
+           <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup2"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="19dp"
+                    Switch:thumb_drawable="@drawable/rswitch_button_small"
+                    Switch:track_drawable="@drawable/rgroove_copy"
+                    Switch:backgroundMask="@drawable/rgroove_mask"
+                    Switch:leftBackground="@drawable/green_drawable"
+                    Switch:rightBackground="@drawable/red_drawable"
+                    Switch:textOn="Girl"
+                    Switch:textOff="Boy" 
+                    /> 
+            <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup2"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:orientation="vertical"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="22dp"
+                    Switch:thumb_drawable="@drawable/rswitch_button_small"
+                    Switch:track_drawable="@drawable/rgroove_copy_vert"
+                    Switch:backgroundMask="@drawable/rgroove_mask_vert"
+                    Switch:leftBackground="@drawable/green_drawable"
+                    Switch:rightBackground="@drawable/red_drawable"
+                    Switch:textOn="Girl"
+                    Switch:textOff="Boy" 
+                    /> 
+                    </LinearLayout>
+      
+      <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" > 
+    
+           <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup3"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:pushStyle="true"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="23dp"
+                    Switch:trackPadding="2dp"
+                    Switch:thumb_drawable="@drawable/stoggle_copy"
+                    Switch:track_drawable="@drawable/sgroove_copy"
+                    Switch:textOn="Coke"
+                    Switch:textOff="Pepsi" 
+                    Switch:leftBackground="@drawable/sleft_background_copy"
+                    Switch:rightBackground="@drawable/sright_background_copy"
+                    Switch:backgroundMask="@drawable/smask_background_copy"
+                    /> 
+                            <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup4"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:pushStyle="true"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="9dp"
+                    Switch:trackPadding="1dp"
+                    Switch:thumb_drawable="@drawable/stoggle_copy_sm"
+                    Switch:track_drawable="@drawable/sgroove_copy_sm"
+                    Switch:textOn=" Yes"
+                    Switch:textOff="No" 
+                    Switch:leftBackground="@drawable/sleft_background_copy_sm"
+                    Switch:rightBackground="@drawable/sright_background_copy_sm"
+                    Switch:backgroundMask="@drawable/smask_background_copy_sm"
+                    /> 
+                <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup5"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:orientation="vertical"
+                    Switch:pushStyle="false"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="12dp"
+                    Switch:trackPadding="6dp"
+                    Switch:thumbPadding="2dp"
+                    Switch:minWidth="19dp"
+                    Switch:minHeight="16dp"
+                    Switch:textOn=""
+                    Switch:textOff="" 
+                    Switch:thumb_drawable="@drawable/vswitch_thumb"
+                    Switch:track_drawable="@drawable/vswitch_trac1k"
+                    Switch:drawableOn="@drawable/vswitch_on_drawable"
+                    Switch:drawableOff="@drawable/vswitch_off_drawable"
+                    /> 
+                    </LinearLayout>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+                   <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup3"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:pushStyle="true"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="27dp"
+                    Switch:trackPadding="2dp"
+                    Switch:thumb_drawable="@drawable/stoggle_copy1"
+                    Switch:track_drawable="@drawable/sgroove_copy"
+                    Switch:textOn="Pickup"
+                    Switch:textOff="Delivery" 
+                    Switch:leftBackground="@drawable/sleft_background_copy1"
+                    Switch:rightBackground="@drawable/sright_background_copy1"
+                    Switch:backgroundMask="@drawable/smask_background_copy"
+                    /> 
+    <View android:layout_height="fill_parent"
+        android:layout_width="21dp" />
+             <com.appscumen.example.Switch
+                    style="@style/SwitchStyle"
+                    android:id="@+id/pickup3"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    Switch:orientation="vertical"
+                    Switch:pushStyle="true"
+                    Switch:textOnThumb="false"
+                    Switch:thumbExtraMovement="27dp"
+                    Switch:trackPadding="2dp"
+                    Switch:minWidth="29dp"
+                    Switch:minHeight="26dp"
+                    Switch:thumb_drawable="@drawable/stoggle_copy1"
+                    Switch:track_drawable="@drawable/sgroove_copy_vert"
+                    Switch:textOn="Pickup"
+                    Switch:textOff="Delivery" 
+                    Switch:leftBackground="@drawable/sleft_background_copy1_vert"
+                    Switch:rightBackground="@drawable/sright_background_copy1_vert"
+                    Switch:backgroundMask="@drawable/smask_background_copy_vert"
+                    /> 
+                    </LinearLayout>
+
+                    
+
+<!--
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:scaleType="fitXY"
+                 android:src="@drawable/stoggle_copy1" />
+
+    <View android:layout_height="fill_parent"
+        android:layout_width="21dp" />
+             <ImageView
+                 android:layout_width="172dp"
+                 android:layout_height="72dp"
+                 android:scaleType="fitXY"
+                 android:src="@drawable/stoggle_copy1" />
+             </LinearLayout>
+
+                    
+-->
+</LinearLayout>
+</ScrollView>
