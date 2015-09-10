@@ -1,6 +1,6 @@
 package com.appscumen.example;
 
-import com.appscumen.example.MySwitch.OnChangeAttemptListener;
+import com.appscumen.example.Switch.OnChangeAttemptListener;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,16 +11,16 @@ import android.widget.TextView;
 
 public class AndroidSwitchDemoActivity extends Activity implements OnChangeAttemptListener, OnCheckedChangeListener {
 	public static final String TAG = AndroidSwitchDemoActivity.class.getSimpleName();
-	MySwitch slideToUnLock;
-	MySwitch publishToggle;
+	Switch slideToUnLock;
+	Switch publishToggle;
 	TextView yes, no;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        slideToUnLock = (MySwitch)findViewById(R.id.switch3);
-        publishToggle = (MySwitch)findViewById(R.id.switch4);
+        slideToUnLock = (Switch)findViewById(R.id.switch3);
+        publishToggle = (Switch)findViewById(R.id.switch4);
         yes = (TextView)findViewById(R.id.Yes);
         no = (TextView)findViewById(R.id.No);
         slideToUnLock.toggle();
